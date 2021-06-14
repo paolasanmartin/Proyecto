@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    {% for usuario in usuarios %}
+        <p>{{usuario}}</p> 
+        <ul>
+            <li><a href="/editar/{{usuario.id}}">Editar</a></li>
+            <li><a href="/eliminar/{{usuario.id}}">Eliminar</a></li>
+        </ul>
+    {% endfor %}
+
+    <a href="/registro">registrarse</a>
+    <a href="/inicioSesion">iniciar sesion</a>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSociety</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/perfil.css' %}">
+</head>
+
+<body>
+    <div id="container">
+        <header> <a href="/home.html"><img src="{% static 'imagenes/home3.png' %}" alt=""></a>
+            
+            <h1>PetSociety</h1>
+        </header>
+        <aside>
+            <ul>
+                <li><a href="/perfil"><img src="{% static 'imagenes/perfil3.png' %}" alt=""></a></li>
+                <li><a href="/tienda"><img src="{% static 'imagenes/tienda.png' %}" alt=""></a></li>
+                <li><img src="{% static 'imagenes/patita.png' %}" alt=""></li>
+                <li><img src="{% static 'imagenes/silueta.png' %}" alt=""></li>
+                <li><img src="{% static 'imagenes/lupa.png' %}" alt=""></li>
+                <li><img src="{% static 'imagenes/configuracion.png' %}" alt=""></li>
+            </ul>
+        </aside>
+        <div id="body">
+            <div class="posteos">
+                <img src="{% static 'imagenes/dog.jpg' %}" alt="">
+                <ul>
+                    <li><img src="{% static 'imagenes/megutsa.png' %}" alt="">321</li>
+                    <li><img src="{% static 'imagenes/comentario.jpg' %}"alt="">3</li>
+                    <li><img src="{% static 'imagenes/compartir.jpg' %}"alt="">1</li>
+                </ul>
+                <p>comentarios</p>
+                <form action=""method="POST">
+                    {% csrf_token %}
+                    
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

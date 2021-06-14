@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSociety-Tienda</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/tienda.css' %}
+
+    ">
+</head>
+
+<body>
+    <div id="container">
+        <header> <a href="/home.html"><img src="{% static 'imagenes/home3.png' %}" alt=""></a>
+            <h1>Tienda</h1>
+        </header>
+        
+        <aside>
+            <ul>
+                <li><a href="/tienda"><img src="{% static 'imagenes/tienda.png' %}" alt=""></a></li>
+                <li><a href="/mapa"><img src="{% static 'imagenes/patita.png' %}" alt=""></a></li>
+                <li><img src="{% static 'imagenes/silueta.png' %}" alt=""></li>
+                <li><img src="{% static 'imagenes/lupa.png' %}" alt=""></li>
+                <li><img src="{% static 'imagenes/configuracion.png' %}" alt=""></li>
+            </ul>
+        </aside>
+        
+    </div>
+</body>
+
+</html>

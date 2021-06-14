@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSociety- Entrar o Registrar</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">    
+   
+</head>
+<body>
+    <section class="form-login">
+    <h4>PetSociety</h4>
+    
+        <input class="controls" type="text" id="email" name="email" placeholder="Correo Electronico">
+        <input class="controls"type="password" id="contraseña" name="contraseña" placeholder="Contraseña">
+        <p><a href="/home"class=buttons>Iniciar Sesion </a></p>
+        
+        <p><a href="">¿Has olvidado tu contraseña?</a></p>
+
+        <p><a href="/registro">Crear nueva cuenta</a></p>
+    </section>
+
+</body>
+</html>
+

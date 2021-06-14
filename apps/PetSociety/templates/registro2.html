@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>PetSociety-Registar</title>
+  {%load static%}
+  <link rel="stylesheet" href="{% static 'css/registro2.css' %}">    
+</head>
+<body>
+  <section class="form-register">
+    <h4>Registro de mascota<h4>
+      {%for mensaje in messages%}
+      <p>{{mensaje}}</p>
+    {%endfor%}
+    <form action="registro2" method="POST">
+        {%csrf_token%}
+        <input class="control" type="text" id="nombre" name="nombre" placeholder="Nombre de la mascota">
+        <p>Selecciona el género de tu mascota:</p>
+        <label for="masculino"> Macho: </label>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+       
+        <label for="femenino">Hembra:</label>
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        
+        
+        <p>Selecciona tipo de mascota</p>
+     <select name="tipo_de_mascota" id="">
+         <option value="Perro">Perro</option>
+         <option value="Gato"> Gato</option>
+         <option value="Pajaro">Pajaro</option>
+         <option value="Conejo">Conejo</option>
+         <option value="Otro"> Otro</option>
+     </select>
+        <input type="text" id="Especifique" name="Especifique" placeholder="Otro">
+     
+       
+       
+        
+    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+    <div class="botons">
+      <a href="/">Registro</a>
+    </div>
+    <p><a href="/inicioSesion">¿Ya tengo Cuenta?</a></p>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>PetSociety-Informacion Usuarios</title>
+  
+</head>
+<body>
+  <section class="form-register">
+    <h4>Registro</h4>
+    {%for mensaje in messages%}
+      <p>{{mensaje}}</p>
+    {%endfor%}
+
+    <form action="registro" method="POST">
+        {%csrf_token%}
+        <input class="control" type="text" id="nombre" name="nombre" placeholder="Nombre del dueño">
+        <input class="control" type="text" id="apellido" name="apellido" placeholder="Apellido">
+        
+        <input class="control" type="text" id="email" name="email" placeholder="Correo Electronico">
+        <input class="control" type="password" id="password" name="password" placeholder="Contraseña">
+        <input class="control" type="password" id="confirmarContraseña" id="repetirContraseña" name="confirmarContraseña" placeholder="Repita la contraseña">
+
+        <a href="/index"> regresar</a>
